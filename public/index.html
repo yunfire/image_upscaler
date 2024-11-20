@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片放大工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-area" id="dropZone">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p>拖曳圖片到此處或點擊上傳</p>
+            <input type="file" id="fileInput" multiple accept="image/*" hidden>
+        </div>
+
+        <div class="settings-panel">
+            <div class="batch-settings">
+                <h3>批量設置</h3>
+                <select id="batchImageType">
+                    <option value="">選擇圖片類型</option>
+                    <option value="photo">照片</option>
+                    <option value="illustration" style="display: none;">卡通/插畫</option>
+                </select>
+                <select id="batchScale">
+                    <option value="">選擇放大倍數</option>
+                    <option value="2">2x</option>
+                    <option value="4">4x</option>
+                </select>
+                <select id="batchNoise">
+                    <option value="0">無降噪</option>
+                    <option value="1">低度降噪</option>
+                    <option value="2">中度降噪</option>
+                    <option value="3">高度降噪</option>
+                </select>
+                <button id="applyBatch">應用到所有圖片</button>
+            </div>
+        </div>
+
+        <div class="images-container" id="imagesContainer">
+            <!-- 上傳的圖片將在這裡顯示 -->
+        </div>
+
+        <div class="button-group">
+            <button id="processAll" class="process-button">開始處理所有圖片</button>
+            <button id="downloadAll" class="process-button download-button" disabled>批量下載所有圖片</button>
+            <button id="removeAll" class="process-button remove-button">移除所有圖片</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
