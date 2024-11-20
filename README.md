@@ -54,13 +54,12 @@ npm start
 
 ## 項目結構
 
-.
-├── public/
-│ ├── index.html # 主頁面
-│ ├── styles.css # 樣式表
-│ └── script.js # 前端邏輯
-├── server.js # 後端服務器
-└── package.json # 項目配置
+- public/
+  - index.html (主頁面)
+  - styles.css (樣式表)
+  - script.js (前端邏輯)
+- server.js (後端服務器)
+- package.json (項目配置)
 
 ## 處理流程
 
